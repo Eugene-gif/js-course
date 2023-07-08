@@ -1,4 +1,6 @@
-# Курс по JavaScript Богдана Стащука
+# Учебный проект по JavaScript на основе курса Богдана Стащука
+
+[### Посмотреть проект](https://eugene-gif.github.io/js-course/)
 
 ## Установка зависимостей
 ```
@@ -14,6 +16,3 @@ yarn dev
 ```
 yarn build
 ```
-
-### Посмотреть проект
-See [Configuration Reference](https://cli.vuejs.org/config/).
