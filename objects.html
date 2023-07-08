@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="panties.svg" />
+  <link rel="stylesheet" href="src/styles/main.scss">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="JS" />
+  <title>Объекты</title>
+</head>
+
+<body>
+  <div id="app">
+    <load="src/layouts/Header/header.html" />
+    <div class="base-layout container-fluid">
+      <div class="container">
+        <div class="page">
+          <h1 class="title">Объекты</h1>
+          <section class="page__section">
+            <div class="text-bold">Структура и синтаксис:</div>
+            <div class="code">
+              const myCity = {
+                city: 'New Yourk',
+                popular: true,
+                country: 'USA',
+              }
+
+              // где city - это свойство
+              // 'New Yourk' - это значение свойства
+            </div>
+            <p class="text">Порядок свойств в объекте не имеет значения</p>
+          </section>
+
+          <section class="page__section">
+            <div class="text-bold">Получение значений свойств:</div>
+            <div class="code">
+              const myCity = {
+                city: 'New Yourk',
+                popular: true,
+                country: 'USA',
+              }
+
+              console.log(myCity.city); // 'New Yourk'
+              console.log(myCity.popular); // true
+            </div>
+            <p class="text">Такой синтаксис называется точечной записью</p>
+          </section>
+
+          <section class="page__section">
+            <div class="text-bold">Изменение значений свойств:</div>
+            <div class="code">
+              const myCity = {
+                city: 'New Yourk',
+              }
+
+              myCity.city = 'Krasnodar';
+
+              console.log(myCity); // {city: 'Krasnodar'}
+            </div>
+            <p class="text"></p>
+          </section>
+
+          <section class="page__section">
+            <div class="text-bold">Добавление новых свойств:</div>
+            <div class="code">
+              const myCity = {
+                city: 'New Yourk',
+              }
+
+              myCity.popular = true;
+              myCity.country = 'USA';
+
+              console.log(myCity);
+            </div>
+            <p class="text"></p>
+          </section>
+
+          <section class="page__section">
+            <div class="text-bold">Удаление свойств:</div>
+            <div class="code">
+              const myCity = {
+                city: 'New Yourk',
+                popular: true,
+                country: 'USA',
+              }
+
+              console.log(myCity);
+
+              delete myCity.country;
+
+              console.log(myCity);
+            </div>
+            <p class="text">Используем оператор удаления
+              <span class="text-bold">delete</span> для удаления свойств
+            </p>
+          </section>
+
+          <section class="page__section">
+            <div class="text-bold">
+              Доступ к значению свойства с использованием скобок:
+            </div>
+            <div class="code">
+              const myCity = {
+                city: 'New Yourk',
+              }
+
+              myCity['popular'] = true;
+
+              console.log(myCity);
+              // {city: 'New Yourk', popular: true}
+
+              const countryPropertyName = 'country';
+
+              myCity[countryPropertyName] = 'USA';
+
+              console.log(myCity);
+              // {city: 'New Yourk', popular: true, country: 'USA'}
+            </div>
+          </section>
+
+          <section class="page__section">
+            <div class="text-bold">
+              Вложенные свойства:
+            </div>
+            <div class="code">
+              const myCity = {
+                city: 'New Yourk',
+                info: {
+                  isPopular: true,
+                  country: 'USA',
+                }
+              }
+
+              console.log(myCity.info.isPopular);
+              // true
+
+              delete myCity.info['isPopular'];
+
+              console.log(myCity)
+              // {city: 'New Yourk', info:{ country: 'USA'}}
+            </div>
+            <p class="text">Здесь показаны примеры точечной и скобочной записи</p>
+          </section>
+
+          <section class="page__section">
+            <div class="text-bold">
+              Использование переменных:
+            </div>
+            <div class="code">
+              const name = 'Eugene';
+              const postsQty = 23;
+
+              const userProfile = {
+                name: name,
+                postsQty: postsQty,
+                hasSignedAgreement: false,
+              }
+            </div>
+            <p class="text">
+              Когда имя свойства совпадает с названием переменной, то можно использовать сокращённую запись:
+            </p>
+            <div class="code">
+              const name = 'Eugene';
+              const postsQty = 23;
+
+              const userProfile = {
+                name,
+                postsQty,
+                hasSignedAgreement: false,
+              }
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+    <load="src/layouts/Footer/footer.html" />
+  </div>
+  <script type="module" src="main.js"></script>
+</body>
+
+</html>

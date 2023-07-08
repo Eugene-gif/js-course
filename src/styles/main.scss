@@ -1,0 +1,17 @@
+/* __________ Utils __________ */
+@import "@/utils/Theme/_theme.scss";
+/* __________ /Utils __________ */
+
+
+/* __________ Components __________ */
+@import "./chunks/_global";
+@import "./chunks/_vars";
+@import "./chunks/fonts";
+@import "./chunks/_pages";
+/* __________ /Components __________ */
+
+
+/*__________ Layouts __________*/
+@import "@/layouts/Header/_Header.scss";
+@import "@/layouts/Footer/_Footer.scss";
+/*__________ /Layouts __________*/
